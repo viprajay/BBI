@@ -13,7 +13,7 @@
   <h2>📝 Add New Order</h2>
 
   <div class="form">
-    <input type="date" id="date">
+    <input type="date" id="date" placeholder="Set Date" required>
     <input type="text" id="name" placeholder="Name" required>
     <input type="text" id="address" placeholder="Address">
     <input type="tel" id="phone" placeholder="Phone">
@@ -26,7 +26,7 @@
   <h2>🔍 Filter Order</h2>
 
   <div class="form">
-    <input type="date" id="filterDate" onchange="applyFilter()">
+    <input type="date" id="filterDate" onchange="applyFilter()" placeholder="Set Date">
     <input type="text" id="filterName" placeholder="Filter by Name" onkeyup="applyFilter()">
     <input type="text" id="filterAddress" placeholder="Filter by Address" onkeyup="applyFilter()">
     <button onclick="clearFilter()" class="clear-btn">Clear Filter</button>
@@ -41,5 +41,6 @@
 
   <script src="script.js"></script>
 </body>
+
 
 </html>
