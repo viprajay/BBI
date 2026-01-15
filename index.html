@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBI Order Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h2>📝 Add New Order</h2>
+
+  <div class="form">
+    <input type="date" id="date">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="address" placeholder="Address">
+    <input type="tel" id="phone" placeholder="Phone">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="additional" placeholder="Order Description"></textarea>
+    <input type="hidden" id="editIndex">
+
+    <button onclick="addTask()">Add Order</button>
+  </div>
+  <h2>🔍 Filter Order</h2>
+
+  <div class="form">
+    <input type="date" id="filterDate" onchange="applyFilter()">
+    <input type="text" id="filterName" placeholder="Filter by Name" onkeyup="applyFilter()">
+    <input type="text" id="filterAddress" placeholder="Filter by Address" onkeyup="applyFilter()">
+    <button onclick="clearFilter()" class="clear-btn">Clear Filter</button>
+
+
+  </div>
+
+  <h2>📋 On Going Orders</h2>
+  <div class="container" id="taskContainer"></div>
+
+  <a href="completed.html" class="link">Go to Completed Order →</a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
