@@ -167,3 +167,9 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 44px;
+}
