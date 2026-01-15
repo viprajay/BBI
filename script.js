@@ -245,7 +245,7 @@ function taskCard(task, index) {
     <p><b>Address:</b> ${task.address || "-"}</p>
     <p><b>Phone:</b> ${task.phone || "-"}</p>
     <p><b>Email:</b> ${task.email || "-"}</p>
-    <p><b>Additional:</b> ${task.additional || "-"}</p>
+    <p><b>Order Details:</b> ${task.additional || "-"}</p>
 
     <div class="card-buttons">
       ${!task.completed ? `<button class="complete" onclick="confirmComplete(${index})">Mark as Complete</button>` : ""}
@@ -280,6 +280,7 @@ function logout() {
   localStorage.removeItem("isLoggedIn");
   location.reload();
 }
+
 
 
 
