@@ -3,18 +3,7 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 const taskContainer = document.getElementById("taskContainer");
 const completedContainer = document.getElementById("completedContainer");
 
-/******** AUTO DATE DD-MM-YYYY ********/
-document.addEventListener("DOMContentLoaded", function () {
-  const dateInput = document.getElementById("date");
-  if (dateInput) {
-    const d = new Date();
-    const day = String(d.getDate()).padStart(2, "0");
-    const month = String(d.getMonth() + 1).padStart(2, "0");
-    const year = d.getFullYear();
 
-    dateInput.value = `${day}-${month}-${year}`;
-  }
-});
 /************************************/
 
 // ================= SHOW TASKS =================
@@ -281,4 +270,5 @@ function logout() {
   localStorage.removeItem("isLoggedIn");
   location.reload();
 }
+
 
